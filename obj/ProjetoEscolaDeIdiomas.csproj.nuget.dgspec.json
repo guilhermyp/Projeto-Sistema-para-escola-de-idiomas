@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rafae\\OneDrive\\Documentos\\Vs Code Cód da Facul\\Projeto-Sistema-para-escola-de-idiomas\\ProjetoEscolaDeIdiomas.csproj": {}
+    "C:\\Users\\Guilhermy Palmeira\\Downloads\\Projeto-Sistema-para-escola-de-idiomas\\ProjetoEscolaDeIdiomas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rafae\\OneDrive\\Documentos\\Vs Code Cód da Facul\\Projeto-Sistema-para-escola-de-idiomas\\ProjetoEscolaDeIdiomas.csproj": {
+    "C:\\Users\\Guilhermy Palmeira\\Downloads\\Projeto-Sistema-para-escola-de-idiomas\\ProjetoEscolaDeIdiomas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rafae\\OneDrive\\Documentos\\Vs Code Cód da Facul\\Projeto-Sistema-para-escola-de-idiomas\\ProjetoEscolaDeIdiomas.csproj",
+        "projectUniqueName": "C:\\Users\\Guilhermy Palmeira\\Downloads\\Projeto-Sistema-para-escola-de-idiomas\\ProjetoEscolaDeIdiomas.csproj",
         "projectName": "ProjetoEscolaDeIdiomas",
-        "projectPath": "C:\\Users\\Rafae\\OneDrive\\Documentos\\Vs Code Cód da Facul\\Projeto-Sistema-para-escola-de-idiomas\\ProjetoEscolaDeIdiomas.csproj",
-        "packagesPath": "C:\\Users\\Rafae\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rafae\\OneDrive\\Documentos\\Vs Code Cód da Facul\\Projeto-Sistema-para-escola-de-idiomas\\obj\\",
+        "projectPath": "C:\\Users\\Guilhermy Palmeira\\Downloads\\Projeto-Sistema-para-escola-de-idiomas\\ProjetoEscolaDeIdiomas.csproj",
+        "packagesPath": "C:\\Users\\Guilhermy Palmeira\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Guilhermy Palmeira\\Downloads\\Projeto-Sistema-para-escola-de-idiomas\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Rafae\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Guilhermy Palmeira\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -73,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
