@@ -1,17 +1,19 @@
-using System.ComponentModel.DataAnnotations; //biblioteca com atributos de validação
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace ProjetoEscolaDeIdiomas.Models;
 
 public class Materia
 {
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
-
+    
     [Required(ErrorMessage = "O nome da matéria é obrigatório.")]
-    [MaxLength(100, ErrorMessage = "O nome da matéria pode ter no máximo 100 caracteres.")]
+    [MaxLength(100, ErrorMessage = "O nome pode ter no máximo 100 caracteres.")]
     public string Nome { get; set; }
-
-    [Range(0, 10, ErrorMessage = "A nota deve estar entre 0 e 10.")]
-    public float Nota { get; set; }
-
-    public bool Inscrito { get; set; }
+    
+    [JsonIgnore]
+    public ICollection<AlunoMateria> AlunoMaterias { get; set; }
 }

@@ -2534,19 +2534,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Guilhermy Palmeira\\.nuget\\packages\\": {}
+    "C:\\Users\\Eduar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Guilhermy Palmeira\\Downloads\\Projeto-Sistema-para-escola-de-idiomas\\ProjetoEscolaDeIdiomas.csproj",
+      "projectUniqueName": "C:\\Users\\Eduar\\OneDrive\\Documentos\\Projetinhos pai\\Projeto-Sistema-para-escola-de-idiomas\\ProjetoEscolaDeIdiomas.csproj",
       "projectName": "ProjetoEscolaDeIdiomas",
-      "projectPath": "C:\\Users\\Guilhermy Palmeira\\Downloads\\Projeto-Sistema-para-escola-de-idiomas\\ProjetoEscolaDeIdiomas.csproj",
-      "packagesPath": "C:\\Users\\Guilhermy Palmeira\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Guilhermy Palmeira\\Downloads\\Projeto-Sistema-para-escola-de-idiomas\\obj\\",
+      "projectPath": "C:\\Users\\Eduar\\OneDrive\\Documentos\\Projetinhos pai\\Projeto-Sistema-para-escola-de-idiomas\\ProjetoEscolaDeIdiomas.csproj",
+      "packagesPath": "C:\\Users\\Eduar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Eduar\\OneDrive\\Documentos\\Projetinhos pai\\Projeto-Sistema-para-escola-de-idiomas\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Guilhermy Palmeira\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Eduar\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -2605,7 +2605,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

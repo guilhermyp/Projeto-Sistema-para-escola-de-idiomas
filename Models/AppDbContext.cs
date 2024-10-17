@@ -6,6 +6,7 @@ public class AppDbContext : DbContext
 {   
     public DbSet<Aluno> Alunos { get; set; }
     public DbSet<Materia> Materias { get; set; }
+    public DbSet<AlunoMateria> AlunoMaterias { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -18,12 +19,19 @@ public class AppDbContext : DbContext
             .HasKey(a => a.Matricula);
         
         modelBuilder.Entity<Materia>()
-            .HasData(
-                new Materia { Id = 1, Nome = "Portugues", Nota = 0.0f, Inscrito = false },
-                new Materia { Id = 2, Nome = "Ingles",    Nota = 0.0f, Inscrito = false },
-                new Materia { Id = 3, Nome = "Alemao",    Nota = 0.0f, Inscrito = false },
-                new Materia { Id = 4, Nome = "Frances",   Nota = 0.0f, Inscrito = false },
-                new Materia { Id = 5, Nome = "Japones",   Nota = 0.0f, Inscrito = false }
-                );
+            .HasKey(m => m.Id);
+
+        modelBuilder.Entity<AlunoMateria>()
+            .HasKey(am => new { am.AlunoId, am.MateriaId });
+
+        modelBuilder.Entity<AlunoMateria>()
+            .HasOne(am => am.Aluno)
+            .WithMany(a => a.AlunoMaterias)
+            .HasForeignKey(am => am.AlunoId);
+
+        modelBuilder.Entity<AlunoMateria>()
+            .HasOne(am => am.Materia)
+            .WithMany(m => m.AlunoMaterias)
+            .HasForeignKey(am => am.MateriaId);
     }
 }
