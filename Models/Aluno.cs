@@ -8,12 +8,12 @@ public class Aluno
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int Matricula { get; set; }
+    public int Matricula { get; set; } 
 
     [Required(ErrorMessage = "O nome do aluno é obrigatório.")]
     [MaxLength(100, ErrorMessage = "O nome pode ter no máximo 100 caracteres.")]
-    public string Nome { get; set; }
+    public string Nome { get; set; } = string.Empty;
     
-    [JsonIgnore]
-    public ICollection<AlunoMateria> AlunoMaterias { get; set; }
+     [JsonIgnore]
+    public ICollection<AlunoMateria> AlunoMaterias { get; set; } = new List<AlunoMateria>();  
 }

@@ -12,8 +12,13 @@ public class Materia
     
     [Required(ErrorMessage = "O nome da matéria é obrigatório.")]
     [MaxLength(100, ErrorMessage = "O nome pode ter no máximo 100 caracteres.")]
-    public string Nome { get; set; }
+    public string Nome { get; set; } = string.Empty;
     
+   [JsonIgnore]
+    public ICollection<AlunoMateria> AlunoMaterias { get; set; } = new List<AlunoMateria>();
+
+    public int? ProfessorId { get; set; }  
     [JsonIgnore]
-    public ICollection<AlunoMateria> AlunoMaterias { get; set; }
+    public Professor? Professor { get; set; } 
+    
 }
