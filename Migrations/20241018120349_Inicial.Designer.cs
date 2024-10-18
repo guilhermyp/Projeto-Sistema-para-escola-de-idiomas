@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjetoEscolaDeIdiomas.Models;
 
@@ -10,9 +11,11 @@ using ProjetoEscolaDeIdiomas.Models;
 namespace ProjetoEscolaDeIdiomas.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241018120349_Inicial")]
+    partial class Inicial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.10");
@@ -41,7 +44,7 @@ namespace ProjetoEscolaDeIdiomas.Migrations
                     b.Property<int>("MateriaId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<decimal?>("Nota")
+                    b.Property<decimal>("Nota")
                         .HasColumnType("TEXT");
 
                     b.HasKey("AlunoId", "MateriaId");
@@ -81,14 +84,6 @@ namespace ProjetoEscolaDeIdiomas.Migrations
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Username")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");

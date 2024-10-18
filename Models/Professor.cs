@@ -10,6 +10,8 @@ namespace ProjetoEscolaDeIdiomas.Models
         [Required]
         [MaxLength(100)]
         public string Nome { get; set; } = string.Empty;
+           public string Username { get; set; } = string.Empty;  
+           public string Password { get; set; } = string.Empty;  
 
         public ICollection<Materia> Materias { get; set; } = new List<Materia>();
     }

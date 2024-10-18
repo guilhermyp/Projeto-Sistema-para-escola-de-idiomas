@@ -1,0 +1,111 @@
+### Login Admin - Obter Token JWT
+POST http://localhost:5186/auth/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "admin"
+}
+
+### Login como Professor
+POST http://localhost:5186/auth/login
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJQZXJtaXNzYW8iOiJBZG1pbiIsImV4cCI6MTcyOTI2NzgxNiwiaXNzIjoic2V1X3Npc3RlbWEiLCJhdWQiOiJzZXVfc2lzdGVtYSJ9.eKiiGxnRWtQ0I17TiNFtMhyH7hOq1jWOWyEifh7kOU8
+
+{
+    "username": "professor1",
+    "password": "senha123"
+}
+
+
+### Login como Aluno
+POST http://localhost:5186/auth/login
+Content-Type: application/json
+
+{
+    "username": "aluno",
+    "password": "aluno"
+}
+
+### Criar Professor (Admin)
+POST http://localhost:5186/professores/adicionar
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJQZXJtaXNzYW8iOiJBZG1pbiIsImV4cCI6MTcyOTI2NzgxNiwiaXNzIjoic2V1X3Npc3RlbWEiLCJhdWQiOiJzZXVfc2lzdGVtYSJ9.eKiiGxnRWtQ0I17TiNFtMhyH7hOq1jWOWyEifh7kOU8
+
+{
+    "nome": "Michael Jackson",
+    "username": "professor1",
+    "password": "senha123"
+}
+
+### Listar Professores (Qualquer Usuário)
+GET http://localhost:5186/professores/listar
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJQZXJtaXNzYW8iOiJBZG1pbiIsImV4cCI6MTcyOTI2NzgxNiwiaXNzIjoic2V1X3Npc3RlbWEiLCJhdWQiOiJzZXVfc2lzdGVtYSJ9.eKiiGxnRWtQ0I17TiNFtMhyH7hOq1jWOWyEifh7kOU8
+
+### Editar Professor (Admin)
+PUT http://localhost:5186/professores/alterar/4 <! – 2 no caso altera o professor id 2, se fosse 3 seria prof id 3 –> 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoicHJvZmVzc29yIiwiUGVybWlzc2FvIjoiUHJvZmVzc29yIiwiZXhwIjoxNzI5MjY0OTM1LCJpc3MiOiJzZXVfc2lzdGVtYSIsImF1ZCI6InNldV9zaXN0ZW1hIn0.68pcObkqezTNyvoDG9wsS64kTGhEWnH-iEQtBaQl8_s
+Content-Type: application/json
+
+{
+    "nome": "Professor Novo"
+}
+
+### Excluir Professor (Admin)
+DELETE http://localhost:5186/professores/excluir/5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJQZXJtaXNzYW8iOiJBZG1pbiIsImV4cCI6MTcyOTI2NzgxNiwiaXNzIjoic2V1X3Npc3RlbWEiLCJhdWQiOiJzZXVfc2lzdGVtYSJ9.eKiiGxnRWtQ0I17TiNFtMhyH7hOq1jWOWyEifh7kOU8
+
+### Criar Matéria (Admin)
+POST http://localhost:5186/materias/adicionar-materia
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoicHJvZmVzc29yIiwiUGVybWlzc2FvIjoiUHJvZmVzc29yIiwiZXhwIjoxNzI5MjY0OTM1LCJpc3MiOiJzZXVfc2lzdGVtYSIsImF1ZCI6InNldV9zaXN0ZW1hIn0.68pcObkqezTNyvoDG9wsS64kTGhEWnH-iEQtBaQl8_s
+Content-Type: application/json
+
+{
+    "nome": "Geografia"
+}
+
+### Listar Matérias (Qualquer Usuário)
+GET http://localhost:5186/materias/listar
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoicHJvZmVzc29yIiwiUGVybWlzc2FvIjoiUHJvZmVzc29yIiwiZXhwIjoxNzI5MjY0OTM1LCJpc3MiOiJzZXVfc2lzdGVtYSIsImF1ZCI6InNldV9zaXN0ZW1hIn0.68pcObkqezTNyvoDG9wsS64kTGhEWnH-iEQtBaQl8_s
+
+### Vincular Professor à Matéria (Admin)
+PUT http://localhost:5186/materias/1/vincular-professor/6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJQZXJtaXNzYW8iOiJBZG1pbiIsImV4cCI6MTcyOTI2NzgxNiwiaXNzIjoic2V1X3Npc3RlbWEiLCJhdWQiOiJzZXVfc2lzdGVtYSJ9.eKiiGxnRWtQ0I17TiNFtMhyH7hOq1jWOWyEifh7kOU8
+
+### Criar Aluno (Admin)
+POST http://localhost:5186/alunos/adicionar
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoicHJvZmVzc29yIiwiUGVybWlzc2FvIjoiUHJvZmVzc29yIiwiZXhwIjoxNzI5MjY0OTM1LCJpc3MiOiJzZXVfc2lzdGVtYSIsImF1ZCI6InNldV9zaXN0ZW1hIn0.68pcObkqezTNyvoDG9wsS64kTGhEWnH-iEQtBaQl8_s
+Content-Type: application/json
+
+{
+    "nome": "Cristiano Ronaldo"
+}
+
+### Listar Alunos (Admin)
+GET http://localhost:5186/alunos/listar
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoicHJvZmVzc29yIiwiUGVybWlzc2FvIjoiUHJvZmVzc29yIiwiZXhwIjoxNzI5MjY0OTM1LCJpc3MiOiJzZXVfc2lzdGVtYSIsImF1ZCI6InNldV9zaXN0ZW1hIn0.68pcObkqezTNyvoDG9wsS64kTGhEWnH-iEQtBaQl8_s
+
+### Excluir Aluno (Admin)
+DELETE http://localhost:5186/alunos/excluir-aluno/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoicHJvZmVzc29yIiwiUGVybWlzc2FvIjoiUHJvZmVzc29yIiwiZXhwIjoxNzI5MjY0OTM1LCJpc3MiOiJzZXVfc2lzdGVtYSIsImF1ZCI6InNldV9zaXN0ZW1hIn0.68pcObkqezTNyvoDG9wsS64kTGhEWnH-iEQtBaQl8_s
+
+### Inscrever Aluno em Matéria (Admin)
+POST http://localhost:5186/alunos/2/inscrever/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoicHJvZmVzc29yIiwiUGVybWlzc2FvIjoiUHJvZmVzc29yIiwiZXhwIjoxNzI5MjY0OTM1LCJpc3MiOiJzZXVfc2lzdGVtYSIsImF1ZCI6InNldV9zaXN0ZW1hIn0.68pcObkqezTNyvoDG9wsS64kTGhEWnH-iEQtBaQl8_s
+
+### Atribuir Nota ao Aluno (Admin)
+POST http://localhost:5186/alunos/1/atribuir-nota/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoicHJvZmVzc29yMSIsIlBlcm1pc3NhbyI6IlByb2Zlc3NvciIsIlByb2Zlc3NvcklkIjoiNiIsImV4cCI6MTcyOTI2ODg1OCwiaXNzIjoic2V1X3Npc3RlbWEiLCJhdWQiOiJzZXVfc2lzdGVtYSJ9.mCJOW8FnoqpntJWTYSUoJFyevdcZajrhbNhTBw6-9e8
+
+{
+    "nota": 8.5
+}
+
+### Gerar Boletim do Aluno (Admin, Professor, ou Aluno)
+GET http://localhost:5186/alunos/2/boletim
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJQZXJtaXNzYW8iOiJBZG1pbiIsImV4cCI6MTcyOTI2MDkzMCwiaXNzIjoic2V1X3Npc3RlbWEiLCJhdWQiOiJzZXVfc2lzdGVtYSJ9.8t5F6O0p8YJV4QYQZkQIPmcQf45AOzr9XNWgRkh9evk
+
+### Testar Requisição com Token Inválido
+GET http://localhost:5186/professores/listar
+Authorization: Bearer token_invalido
